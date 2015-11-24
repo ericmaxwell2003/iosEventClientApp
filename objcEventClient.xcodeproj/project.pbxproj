@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0709D0461C04F73E005DDF99 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0709D0451C04F73E005DDF99 /* Default-568h@2x.png */; };
 		07A452FF1C04F1DB007B78FE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A452FD1C04F1DB007B78FE /* Post.m */; };
 		07A453021C04F1F4007B78FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453011C04F1F4007B78FE /* AppDelegate.m */; };
 		07A453051C04F20E007B78FE /* RedditService.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453041C04F20E007B78FE /* RedditService.m */; };
@@ -23,7 +22,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0709D0451C04F73E005DDF99 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		07A452FD1C04F1DB007B78FE /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = objcEventClient/Post.m; sourceTree = SOURCE_ROOT; };
 		07A452FE1C04F1DB007B78FE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = objcEventClient/Post.h; sourceTree = SOURCE_ROOT; };
 		07A453001C04F1F3007B78FE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = objcEventClient/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -102,7 +100,6 @@
 		4D66A58D1A4328DD00C35E75 = {
 			isa = PBXGroup;
 			children = (
-				0709D0451C04F73E005DDF99 /* Default-568h@2x.png */,
 				4D66A5981A4328DD00C35E75 /* eventClient */,
 				4D66A5971A4328DD00C35E75 /* Products */,
 				03733C04EC6EBB4C2A8415A8 /* Pods */,
@@ -217,7 +214,6 @@
 				07A4531E1C04F328007B78FE /* Main.storyboard in Resources */,
 				07A453111C04F277007B78FE /* Info.plist in Resources */,
 				07A453141C04F291007B78FE /* Images.xcassets in Resources */,
-				0709D0461C04F73E005DDF99 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
