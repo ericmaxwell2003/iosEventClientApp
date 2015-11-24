@@ -13,11 +13,12 @@
 		07A4530C1C04F262007B78FE /* RedditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453061C04F262007B78FE /* RedditTableViewController.m */; };
 		07A4530D1C04F262007B78FE /* RedditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453071C04F262007B78FE /* RedditDetailViewController.m */; };
 		07A4530E1C04F262007B78FE /* RedditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4530A1C04F262007B78FE /* RedditTableViewCell.m */; };
-		07A453111C04F277007B78FE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07A4530F1C04F277007B78FE /* Info.plist */; };
 		07A453121C04F277007B78FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453101C04F277007B78FE /* main.m */; };
 		07A453141C04F291007B78FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A453131C04F291007B78FE /* Images.xcassets */; };
 		07A4531D1C04F328007B78FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A453191C04F328007B78FE /* LaunchScreen.xib */; };
 		07A4531E1C04F328007B78FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A4531B1C04F328007B78FE /* Main.storyboard */; };
+		6915C6871C0512A900D63CC3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915C6861C0512A900D63CC3 /* LoginViewController.m */; };
+		6915C68A1C0512C900D63CC3 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915C6891C0512C900D63CC3 /* SignupViewController.m */; };
 		B55DEA82471D31BE45680F83 /* libPods-objcEventClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBF8C725FFE18B9CE10FF25 /* libPods-objcEventClient.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,10 @@
 		07A4531C1C04F328007B78FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = objcEventClient/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		4BBF8C725FFE18B9CE10FF25 /* libPods-objcEventClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-objcEventClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D66A5961A4328DD00C35E75 /* Event Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6915C6851C0512A900D63CC3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		6915C6861C0512A900D63CC3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		6915C6881C0512C900D63CC3 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = SOURCE_ROOT; };
+		6915C6891C0512C900D63CC3 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = SOURCE_ROOT; };
 		7F2E2059F4D3B0028BCEE5B3 /* Pods-objcEventClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objcEventClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objcEventClient/Pods-objcEventClient.debug.xcconfig"; sourceTree = "<group>"; };
 		9356835481C87C035DDDD139 /* Pods-objcEventClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objcEventClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-objcEventClient/Pods-objcEventClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +80,10 @@
 				07A453091C04F262007B78FE /* RedditDetailViewController.h */,
 				07A4530A1C04F262007B78FE /* RedditTableViewCell.m */,
 				07A4530B1C04F262007B78FE /* RedditTableViewController.h */,
+				6915C6851C0512A900D63CC3 /* LoginViewController.h */,
+				6915C6861C0512A900D63CC3 /* LoginViewController.m */,
+				6915C6881C0512C900D63CC3 /* SignupViewController.h */,
+				6915C6891C0512C900D63CC3 /* SignupViewController.m */,
 			);
 			name = viewController;
 			sourceTree = "<group>";
@@ -212,7 +221,6 @@
 			files = (
 				07A4531D1C04F328007B78FE /* LaunchScreen.xib in Resources */,
 				07A4531E1C04F328007B78FE /* Main.storyboard in Resources */,
-				07A453111C04F277007B78FE /* Info.plist in Resources */,
 				07A453141C04F291007B78FE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6915C6871C0512A900D63CC3 /* LoginViewController.m in Sources */,
 				07A4530C1C04F262007B78FE /* RedditTableViewController.m in Sources */,
 				07A453021C04F1F4007B78FE /* AppDelegate.m in Sources */,
+				6915C68A1C0512C900D63CC3 /* SignupViewController.m in Sources */,
 				07A4530E1C04F262007B78FE /* RedditTableViewCell.m in Sources */,
 				07A4530D1C04F262007B78FE /* RedditDetailViewController.m in Sources */,
 				07A452FF1C04F1DB007B78FE /* Post.m in Sources */,
@@ -389,11 +399,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/objcEventClient/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.credible.EventFinder;
 				PRODUCT_NAME = "Event Finder";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -403,11 +415,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/objcEventClient/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.credible.EventFinder;
 				PRODUCT_NAME = "Event Finder";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
