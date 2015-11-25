@@ -8,30 +8,57 @@
 
 #import "SignupViewController.h"
 
+#import "EventService.h"
+#import "MMProgressHUD.h"
+
 @interface SignupViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UITextField *name;
+@property (weak, nonatomic) IBOutlet UITextField *email;
 
 @end
 
 @implementation SignupViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRegistrationSuccess:) name:EVENTS_CALL_COMPLETED_WITH_RESULT object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onRegistrationFailure:) name:EVENTS_CALL_FAILED_WITH_ERROR object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)signup:(id)sender {
+    [MMProgressHUD showWithTitle:@"Register..."];
+    
+    RegistrationDto *registrationDto = [[RegistrationDto alloc] init];
+    registrationDto.name = self.name.text;
+    registrationDto.email = self.email.text;
+    registrationDto.username = self.username.text;
+    registrationDto.password = self.password.text;
+    EventService *service = [EventService sharedInstance];
+    [service registerWithRegistrationDto:registrationDto];
 }
-*/
+
+#pragma mark - notification events
+- (void)onRegistrationSuccess:(NSNotification*)notification
+{
+    [MMProgressHUD dismissWithSuccess:@"" title:@"" afterDelay:0.2];
+    NSLog(@"Registration is : %@", notification.object);
+}
+
+- (void)onRegistrationFailure:(NSNotification*)notification
+{
+    NSError *error = notification.object;
+    NSLog(@"error %@", error);
+    [MMProgressHUD dismissWithError:@"" title:@"Unable to Login" afterDelay:1.0];
+}
 
 @end

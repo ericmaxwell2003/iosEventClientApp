@@ -9,7 +9,7 @@
 #import "RedditService.h"
 
 #import "AFNetworking.h"
-#import "Post.h"
+//#import "Post.h"
 #import "NSDate+TimeAgo.h"
 
 @implementation RedditService
@@ -48,20 +48,20 @@
         
         for (id json in [[responseObject objectForKey:@"data"] objectForKey:@"children"]) {
         
-            Post *post = [[Post alloc] init];
-            post.id = [[json objectForKey:@"data"] objectForKey:@"id"];
-            post.title = [[json objectForKey:@"data"] objectForKey:@"title"];
-            
-            NSNumber *createdUtc = [[json objectForKey:@"data"] objectForKey:@"created_utc"];
-            NSDate *datePosted = [NSDate dateWithTimeIntervalSince1970:createdUtc.intValue];
-            NSString *postedBy = [[json objectForKey:@"data"] objectForKey:@"author"];
-            NSString *subTitle = [NSString stringWithFormat:@"submitted %@ by %@", datePosted.timeAgo, postedBy];
-            post.subtitle = subTitle;
-            
-            post.thumbnailUrl = [[json objectForKey:@"data"] objectForKey:@"thumbnail"];
-            post.fullImageUrl = [[json objectForKey:@"data"] objectForKey:@"url"];
-            
-            [posts addObject:post];
+//            Post *post = [[Post alloc] init];
+//            post.id = [[json objectForKey:@"data"] objectForKey:@"id"];
+//            post.title = [[json objectForKey:@"data"] objectForKey:@"title"];
+//            
+//            NSNumber *createdUtc = [[json objectForKey:@"data"] objectForKey:@"created_utc"];
+//            NSDate *datePosted = [NSDate dateWithTimeIntervalSince1970:createdUtc.intValue];
+//            NSString *postedBy = [[json objectForKey:@"data"] objectForKey:@"author"];
+//            NSString *subTitle = [NSString stringWithFormat:@"submitted %@ by %@", datePosted.timeAgo, postedBy];
+//            post.subtitle = subTitle;
+//            
+//            post.thumbnailUrl = [[json objectForKey:@"data"] objectForKey:@"thumbnail"];
+//            post.fullImageUrl = [[json objectForKey:@"data"] objectForKey:@"url"];
+//            
+          //  [posts addObject:post];
         }
         NSDictionary *eventObject = @{@"posts": posts, @"after": after};
         [[NSNotificationCenter defaultCenter] postNotificationName:POSTS_DID_LOAD object:eventObject];

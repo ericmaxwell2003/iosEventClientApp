@@ -119,7 +119,7 @@
         <!--Login Controller-->
         <scene sceneID="KqG-eX-IgZ">
             <objects>
-                <viewController id="kP3-in-Q2Q" userLabel="Login Controller" sceneMemberID="viewController">
+                <viewController id="kP3-in-Q2Q" userLabel="Login Controller" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6rv-Iz-ugR"/>
                         <viewControllerLayoutGuide type="bottom" id="d1J-Xn-Akf"/>
@@ -134,23 +134,11 @@
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="irT-xv-s8r">
                                         <rect key="frame" x="95" y="50" width="351" height="65"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXy-WV-btu">
-                                        <rect key="frame" x="20" y="148" width="500" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="338" id="5Km-eh-bpE"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="5Km-eh-bpE"/>
-                                            </mask>
-                                        </variation>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rzp-v2-OzV">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rzp-v2-OzV">
                                         <rect key="frame" x="20" y="219" width="500" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="Password" label="password"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AFV-GB-ttu">
                                         <rect key="frame" x="242" y="277" width="56" height="32"/>
@@ -159,6 +147,9 @@
                                             <constraint firstAttribute="width" constant="56" id="whJ-Lg-CXT"/>
                                         </constraints>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="login:" destination="kP3-in-Q2Q" eventType="touchUpInside" id="IsL-WG-3kr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1a-TP-g4z">
                                         <rect key="frame" x="175" y="317" width="191" height="32"/>
@@ -170,6 +161,25 @@
                                             <segue destination="o6f-pb-KwC" kind="showDetail" action="showViewController:sender:" id="2Yv-5G-nfa"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXy-WV-btu">
+                                        <rect key="frame" x="20" y="148" width="500" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" hint="User Name" identifier="username" label="username"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="338" id="5Km-eh-bpE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="floatingLabelYPadding">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5Km-eh-bpE"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="AFV-GB-ttu" firstAttribute="centerX" secondItem="h1a-TP-g4z" secondAttribute="centerX" id="5ue-eI-jFM"/>
@@ -199,6 +209,10 @@
                             <constraint firstItem="j2d-Bo-5FC" firstAttribute="leading" secondItem="hcx-iD-wAb" secondAttribute="leadingMargin" constant="10" id="Yma-hr-wEC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="Rzp-v2-OzV" id="VHI-ra-oS9"/>
+                        <outlet property="username" destination="IXy-WV-btu" id="zUg-0O-BdX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvJ-R7-ntO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="758" y="153"/>
         </scene>
-        <!--Login Controller-->
+        <!--Signup Controller-->
         <scene sceneID="vw1-YN-iXH">
             <objects>
-                <viewController id="o6f-pb-KwC" userLabel="Login Controller" sceneMemberID="viewController">
+                <viewController id="o6f-pb-KwC" userLabel="Signup Controller" customClass="SignupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="erH-Is-7zB"/>
                         <viewControllerLayoutGuide type="bottom" id="6on-26-Gqc"/>
@@ -239,7 +253,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l83-JL-0lP">
                                 <rect key="frame" x="30" y="30" width="540" height="468"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pwr-De-FAN">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pwr-De-FAN">
                                         <rect key="frame" x="20" y="189" width="500" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="xjy-aG-dek"/>
@@ -259,6 +273,9 @@
                                             <constraint firstAttribute="height" constant="32" id="CnF-BY-80n"/>
                                         </constraints>
                                         <state key="normal" title="Create Account"/>
+                                        <connections>
+                                            <action selector="signup:" destination="o6f-pb-KwC" eventType="touchUpInside" id="e2F-yP-8a9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSr-Ci-uCW">
                                         <rect key="frame" x="175" y="416" width="191" height="32"/>
@@ -271,7 +288,7 @@
                                             <segue destination="kP3-in-Q2Q" kind="show" action="showDetailViewController:sender:" id="W5y-ZS-2UQ"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zXd-bY-onV">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zXd-bY-onV">
                                         <rect key="frame" x="20" y="257" width="500" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Rad-NN-fjI"/>
@@ -279,7 +296,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cgg-bb-4Rf">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cgg-bb-4Rf">
                                         <rect key="frame" x="20" y="328" width="500" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="TxC-Wo-ygd"/>
@@ -287,7 +304,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fjn-NS-klJ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fjn-NS-klJ">
                                         <rect key="frame" x="20" y="118" width="500" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="338" id="iaP-em-W5s"/>
@@ -335,6 +352,12 @@
                             <constraint firstItem="l83-JL-0lP" firstAttribute="leading" secondItem="lxr-ug-Xan" secondAttribute="leading" constant="30" id="t4a-Wz-Zsd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="pwr-De-FAN" id="1Ov-1b-K7y"/>
+                        <outlet property="name" destination="Fjn-NS-klJ" id="KiN-bI-INH"/>
+                        <outlet property="password" destination="cgg-bb-4Rf" id="kPP-vo-MmH"/>
+                        <outlet property="username" destination="zXd-bY-onV" id="eA3-In-sFf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNz-LM-0Qi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,7 +14,7 @@
 #import "UIScrollView+SVInfiniteScrolling.h"
 #import "AsyncImageView.h"
 #import "RedditService.h"
-#import "Post.h"
+#import "EventDto.h"
 #import "RedditTableViewCell.h"
 #import "MMProgressHUD.h"
 
@@ -153,10 +153,10 @@ static NSString *initialPage = @"";
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    Post *post = [self.postList objectAtIndex:indexPath.row];
-    RedditDetailViewController *vc = segue.destinationViewController;
-    vc.imageUrl = post.fullImageUrl;
-    vc.navigationItem.title = post.title;
+//    Post *post = [self.postList objectAtIndex:indexPath.row];
+//    RedditDetailViewController *vc = segue.destinationViewController;
+//    vc.imageUrl = post.fullImageUrl;
+//    vc.navigationItem.title = post.title;
 }
 
 
@@ -170,10 +170,10 @@ static NSString *initialPage = @"";
 {
 
     RedditTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    Post *post = [self.postList objectAtIndex:[indexPath row]];
-    cell.postTitle.text = post.title;
-    cell.postSubtitle.text = post.subtitle;
-    cell.thumbnail.imageURL = [NSURL URLWithString:post.thumbnailUrl];
+//    Post *post = [self.postList objectAtIndex:[indexPath row]];
+//    cell.postTitle.text = post.title;
+//    cell.postSubtitle.text = post.subtitle;
+//    cell.thumbnail.imageURL = [NSURL URLWithString:post.thumbnailUrl];
     return cell;
 }
 

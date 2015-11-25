@@ -8,5 +8,6 @@ target 'objcEventClient' do
     pod 'AsyncImageView', '~> 1.5.1'
     pod 'SVPullToRefresh', '~> 0.4.1'
     pod 'MMProgressHUD', '~> 0.3.0'
+    pod 'JVFloatLabeledTextField', '~> 1.1.0'
 
 end

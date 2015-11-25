@@ -7,32 +7,53 @@
 //
 
 #import "LoginViewController.h"
+#import "EventService.h"
+#import "MMProgressHUD.h"
 
 @interface LoginViewController ()
-@property (weak, nonatomic) IBOutlet UIScrollView *formScrollView;
-
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UITextField *password;
 @end
 
 @implementation LoginViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.formScrollView.contentSize = self.view.frame.size; //sets ScrollView content size
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onLoginSuccess:) name:EVENTS_CALL_COMPLETED_WITH_RESULT object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onLoginFailure:) name:EVENTS_CALL_FAILED_WITH_ERROR object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)login:(id)sender
+{
+    [MMProgressHUD showWithTitle:@"Login..."];
+    
+    LoginDto *loginDto = [[LoginDto alloc] init];
+    loginDto.username = self.username.text;
+    loginDto.password = self.password.text;
+    EventService *service = [EventService sharedInstance];
+    [service loginUsingLoginDto:loginDto];
 }
-*/
+
+#pragma mark - notification events
+- (void)onLoginSuccess:(NSNotification*)notification
+{
+    [MMProgressHUD dismissWithSuccess:@"" title:@"" afterDelay:0.2];
+    NSLog(@"Token is : %@", notification.object);
+}
+
+- (void)onLoginFailure:(NSNotification*)notification
+{
+    NSError *error = notification.object;
+    NSLog(@"error %@", error);
+    [MMProgressHUD dismissWithError:@"" title:@"Unable to Login" afterDelay:1.0];
+}
+
 
 @end
