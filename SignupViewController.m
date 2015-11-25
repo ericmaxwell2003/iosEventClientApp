@@ -47,11 +47,20 @@
     [service registerWithRegistrationDto:registrationDto];
 }
 
+-(void) goBackToLogin
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)alreadyMember:(id)sender {
+    [self goBackToLogin];
+}
+
 #pragma mark - notification events
 - (void)onRegistrationSuccess:(NSNotification*)notification
 {
     [MMProgressHUD dismissWithSuccess:@"" title:@"" afterDelay:0.2];
-    NSLog(@"Registration is : %@", notification.object);
+    [self performSelector:@selector(goBackToLogin)
+               withObject:nil afterDelay:0.4];
 }
 
 - (void)onRegistrationFailure:(NSNotification*)notification

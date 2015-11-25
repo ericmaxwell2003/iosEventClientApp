@@ -7,6 +7,12 @@
 #import "RegistrationDto.h"
 #import "OauthTokenDto.h"
 
+@interface EventService()
+
+@property (nonatomic, strong) OauthTokenDto *oauthTokenDto;
+
+@end
+
 @implementation EventService
 
 + (EventService *)sharedInstance
@@ -40,7 +46,8 @@
              token.scope = [responseObject objectForKey:@"scope"];
              token.tokenType = [responseObject objectForKey:@"token_type"];
              token.expiresIn = [[responseObject objectForKey:@"expires_in"] longValue];
-             [[NSNotificationCenter defaultCenter] postNotificationName:EVENTS_CALL_COMPLETED_WITH_RESULT object:token];
+             self.oauthTokenDto = token;
+             [[NSNotificationCenter defaultCenter] postNotificationName:EVENTS_CALL_COMPLETED_WITH_RESULT object:nil];
         
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              [[NSNotificationCenter defaultCenter] postNotificationName:EVENTS_CALL_FAILED_WITH_ERROR object:error];
@@ -71,7 +78,6 @@
              dto.name = [responseObject objectForKey:@"fullName"];
              dto.email = [responseObject objectForKey:@"email"];
              dto.username = [responseObject objectForKey:@"username"];
-             dto.password = [responseObject objectForKey:@"password"];
              [[NSNotificationCenter defaultCenter] postNotificationName:EVENTS_CALL_COMPLETED_WITH_RESULT object:dto];
              
          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -83,20 +89,28 @@
 
 }
 
-- (void)loadEventsFromServerUsingSyncToken:(NSString *)token
+- (void)loadEventsFromServerUsingSyncToken:(NSString *)syncToken
 {
 
     NSString *urlString = [BASE_URL stringByAppendingString:EVENTS];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 
-    [manager.requestSerializer setValue:[@"Bearer " stringByAppendingString:token]
-                     forHTTPHeaderField:@"Authorization"];
+    // If we dont' have an OAuthToken yet, then we won't set it here.  The call will fail because the resource
+    // is secured by token access.
+    if(self.oauthTokenDto.accessToken) {
+        [manager.requestSerializer setValue:[@"Bearer " stringByAppendingString:self.oauthTokenDto.accessToken]
+                         forHTTPHeaderField:@"Authorization"];
+    }
 
-    [manager GET:urlString parameters:@{@"token": token} success:^(AFHTTPRequestOperation *operation, id eventResponse) {
+    if(!syncToken) {
+        syncToken = @"";
+    }
+    
+    [manager GET:urlString parameters:@{@"syncToken": syncToken} success:^(AFHTTPRequestOperation *operation, id eventResponse) {
         
         NSMutableArray *events = [NSMutableArray array];
-        NSString *token = @"token";//[[responseObject objectForKey:@"data"] objectForKey:@"token"];
+        NSString *newSyncToken = @"syncToken";//[[responseObject objectForKey:@"data"] objectForKey:@"token"];
         
 //        for (id json in [[responseObject objectForKey:@"data"] objectForKey:@"children"]) {
         for (id json in eventResponse) {
@@ -111,7 +125,7 @@
  
             [events addObject:event];
         }
-        NSDictionary *eventObject = @{@"events": events, @"token": token};
+        NSDictionary *eventObject = @{@"events": events, @"syncToken": newSyncToken};
         [[NSNotificationCenter defaultCenter] postNotificationName:EVENTS_CALL_COMPLETED_WITH_RESULT object:eventObject];
         
         

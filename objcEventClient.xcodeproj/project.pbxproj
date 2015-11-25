@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07A453021C04F1F4007B78FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453011C04F1F4007B78FE /* AppDelegate.m */; };
-		07A453051C04F20E007B78FE /* RedditService.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453041C04F20E007B78FE /* RedditService.m */; };
-		07A4530C1C04F262007B78FE /* RedditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453061C04F262007B78FE /* RedditTableViewController.m */; };
-		07A4530D1C04F262007B78FE /* RedditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453071C04F262007B78FE /* RedditDetailViewController.m */; };
-		07A4530E1C04F262007B78FE /* RedditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4530A1C04F262007B78FE /* RedditTableViewCell.m */; };
+		07A4530C1C04F262007B78FE /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453061C04F262007B78FE /* EventTableViewController.m */; };
+		07A4530E1C04F262007B78FE /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4530A1C04F262007B78FE /* EventTableViewCell.m */; };
 		07A453121C04F277007B78FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453101C04F277007B78FE /* main.m */; };
 		07A453141C04F291007B78FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A453131C04F291007B78FE /* Images.xcassets */; };
 		07A4531D1C04F328007B78FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A453191C04F328007B78FE /* LaunchScreen.xib */; };
@@ -29,14 +27,10 @@
 /* Begin PBXFileReference section */
 		07A453001C04F1F3007B78FE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = objcEventClient/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		07A453011C04F1F4007B78FE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = objcEventClient/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		07A453031C04F20E007B78FE /* RedditService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditService.h; path = objcEventClient/RedditService.h; sourceTree = SOURCE_ROOT; };
-		07A453041C04F20E007B78FE /* RedditService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditService.m; path = objcEventClient/RedditService.m; sourceTree = SOURCE_ROOT; };
-		07A453061C04F262007B78FE /* RedditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditTableViewController.m; path = objcEventClient/RedditTableViewController.m; sourceTree = SOURCE_ROOT; };
-		07A453071C04F262007B78FE /* RedditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditDetailViewController.m; path = objcEventClient/RedditDetailViewController.m; sourceTree = SOURCE_ROOT; };
-		07A453081C04F262007B78FE /* RedditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditTableViewCell.h; path = objcEventClient/RedditTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		07A453091C04F262007B78FE /* RedditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditDetailViewController.h; path = objcEventClient/RedditDetailViewController.h; sourceTree = SOURCE_ROOT; };
-		07A4530A1C04F262007B78FE /* RedditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditTableViewCell.m; path = objcEventClient/RedditTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		07A4530B1C04F262007B78FE /* RedditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditTableViewController.h; path = objcEventClient/RedditTableViewController.h; sourceTree = SOURCE_ROOT; };
+		07A453061C04F262007B78FE /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventTableViewController.m; path = objcEventClient/EventTableViewController.m; sourceTree = SOURCE_ROOT; };
+		07A453081C04F262007B78FE /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventTableViewCell.h; path = objcEventClient/EventTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		07A4530A1C04F262007B78FE /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventTableViewCell.m; path = objcEventClient/EventTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		07A4530B1C04F262007B78FE /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventTableViewController.h; path = objcEventClient/EventTableViewController.h; sourceTree = SOURCE_ROOT; };
 		07A4530F1C04F277007B78FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = objcEventClient/Info.plist; sourceTree = SOURCE_ROOT; };
 		07A453101C04F277007B78FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = objcEventClient/main.m; sourceTree = SOURCE_ROOT; };
 		07A453131C04F291007B78FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = objcEventClient/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -86,12 +80,10 @@
 		07B217561AAA60180097848D /* viewController */ = {
 			isa = PBXGroup;
 			children = (
-				07A453061C04F262007B78FE /* RedditTableViewController.m */,
-				07A453071C04F262007B78FE /* RedditDetailViewController.m */,
-				07A453081C04F262007B78FE /* RedditTableViewCell.h */,
-				07A453091C04F262007B78FE /* RedditDetailViewController.h */,
-				07A4530A1C04F262007B78FE /* RedditTableViewCell.m */,
-				07A4530B1C04F262007B78FE /* RedditTableViewController.h */,
+				07A453061C04F262007B78FE /* EventTableViewController.m */,
+				07A4530B1C04F262007B78FE /* EventTableViewController.h */,
+				07A453081C04F262007B78FE /* EventTableViewCell.h */,
+				07A4530A1C04F262007B78FE /* EventTableViewCell.m */,
 				6915C6851C0512A900D63CC3 /* LoginViewController.h */,
 				6915C6861C0512A900D63CC3 /* LoginViewController.m */,
 				6915C6881C0512C900D63CC3 /* SignupViewController.h */,
@@ -103,8 +95,6 @@
 		07C42CE71AA9249E008E7CAE /* service */ = {
 			isa = PBXGroup;
 			children = (
-				07A453031C04F20E007B78FE /* RedditService.h */,
-				07A453041C04F20E007B78FE /* RedditService.m */,
 				69281C601C051FE700FCECE3 /* EventService.m */,
 				69281C621C05200000FCECE3 /* EventService.h */,
 			);
@@ -302,16 +292,14 @@
 			files = (
 				6915C6871C0512A900D63CC3 /* LoginViewController.m in Sources */,
 				69281C611C051FE700FCECE3 /* EventService.m in Sources */,
-				07A4530C1C04F262007B78FE /* RedditTableViewController.m in Sources */,
+				07A4530C1C04F262007B78FE /* EventTableViewController.m in Sources */,
 				69281C5F1C051EBB00FCECE3 /* EventDto.m in Sources */,
 				69281C671C0523B200FCECE3 /* LoginDto.m in Sources */,
 				07A453021C04F1F4007B78FE /* AppDelegate.m in Sources */,
 				69281C681C0523B200FCECE3 /* RegistrationDto.m in Sources */,
 				6915C68A1C0512C900D63CC3 /* SignupViewController.m in Sources */,
-				07A4530E1C04F262007B78FE /* RedditTableViewCell.m in Sources */,
-				07A4530D1C04F262007B78FE /* RedditDetailViewController.m in Sources */,
+				07A4530E1C04F262007B78FE /* EventTableViewCell.m in Sources */,
 				07A453121C04F277007B78FE /* main.m in Sources */,
-				07A453051C04F20E007B78FE /* RedditService.m in Sources */,
 				69281C6B1C052AF300FCECE3 /* OauthTokenDto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

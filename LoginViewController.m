@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "EventService.h"
 #import "MMProgressHUD.h"
+#import "EventTableViewController.h"
+
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *username;
@@ -41,11 +43,18 @@
     [service loginUsingLoginDto:loginDto];
 }
 
+- (void)goToEvents
+{
+    UINavigationController *newView = [self.storyboard instantiateViewControllerWithIdentifier:@"eventNavController"];
+    [self presentViewController:newView animated:YES completion:nil];
+}
+
 #pragma mark - notification events
 - (void)onLoginSuccess:(NSNotification*)notification
 {
     [MMProgressHUD dismissWithSuccess:@"" title:@"" afterDelay:0.2];
-    NSLog(@"Token is : %@", notification.object);
+    [self performSelector:@selector(goToEvents)
+               withObject:nil afterDelay:0.4];
 }
 
 - (void)onLoginFailure:(NSNotification*)notification
