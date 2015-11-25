@@ -27,7 +27,7 @@ PODS:
   - SVPullToRefresh (0.4.1)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.4)
+  - AFNetworking (~> 2.6.3)
   - AsyncImageView (~> 1.5.1)
   - JVFloatLabeledTextField (~> 1.1.0)
   - MMProgressHUD (~> 0.3.0)

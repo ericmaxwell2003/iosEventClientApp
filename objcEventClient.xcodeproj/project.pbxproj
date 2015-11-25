@@ -21,6 +21,7 @@
 		69281C671C0523B200FCECE3 /* LoginDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 69281C641C0523B200FCECE3 /* LoginDto.m */; };
 		69281C681C0523B200FCECE3 /* RegistrationDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 69281C661C0523B200FCECE3 /* RegistrationDto.m */; };
 		69281C6B1C052AF300FCECE3 /* OauthTokenDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 69281C6A1C052AF300FCECE3 /* OauthTokenDto.m */; };
+		699533971C0672EE00911644 /* localhost.cer in Resources */ = {isa = PBXBuildFile; fileRef = 699533961C0672EE00911644 /* localhost.cer */; };
 		B55DEA82471D31BE45680F83 /* libPods-objcEventClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBF8C725FFE18B9CE10FF25 /* libPods-objcEventClient.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		69281C661C0523B200FCECE3 /* RegistrationDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationDto.m; sourceTree = SOURCE_ROOT; };
 		69281C691C052AF300FCECE3 /* OauthTokenDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OauthTokenDto.h; sourceTree = SOURCE_ROOT; };
 		69281C6A1C052AF300FCECE3 /* OauthTokenDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OauthTokenDto.m; sourceTree = SOURCE_ROOT; };
+		699533961C0672EE00911644 /* localhost.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = localhost.cer; sourceTree = SOURCE_ROOT; };
 		7F2E2059F4D3B0028BCEE5B3 /* Pods-objcEventClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objcEventClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objcEventClient/Pods-objcEventClient.debug.xcconfig"; sourceTree = "<group>"; };
 		9356835481C87C035DDDD139 /* Pods-objcEventClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objcEventClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-objcEventClient/Pods-objcEventClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 		4D66A5991A4328DD00C35E75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				699533961C0672EE00911644 /* localhost.cer */,
 				07A4530F1C04F277007B78FE /* Info.plist */,
 				07A453101C04F277007B78FE /* main.m */,
 			);
@@ -231,6 +234,7 @@
 			files = (
 				07A4531D1C04F328007B78FE /* LaunchScreen.xib in Resources */,
 				07A4531E1C04F328007B78FE /* Main.storyboard in Resources */,
+				699533971C0672EE00911644 /* localhost.cer in Resources */,
 				07A453141C04F291007B78FE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

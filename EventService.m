@@ -30,6 +30,9 @@
     NSString *urlString = [BASE_URL stringByAppendingString:LOGIN];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.securityPolicy.validatesDomainName = NO;
+
     
     NSError *error = nil;
     NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer]
@@ -61,7 +64,9 @@
     NSString *urlString = [BASE_URL stringByAppendingString:REGISTER];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.securityPolicy.validatesDomainName = NO;
+
     NSError *error = nil;
     NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer]
                                     requestWithMethod:@"POST"
@@ -95,6 +100,8 @@
     NSString *urlString = [BASE_URL stringByAppendingString:EVENTS];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.securityPolicy.allowInvalidCertificates = YES;
+    manager.securityPolicy.validatesDomainName = NO;
 
     // If we dont' have an OAuthToken yet, then we won't set it here.  The call will fail because the resource
     // is secured by token access.
@@ -110,10 +117,9 @@
     [manager GET:urlString parameters:@{@"syncToken": syncToken} success:^(AFHTTPRequestOperation *operation, id eventResponse) {
         
         NSMutableArray *events = [NSMutableArray array];
-        NSString *newSyncToken = @"syncToken";//[[responseObject objectForKey:@"data"] objectForKey:@"token"];
+        NSString *newSyncToken = [eventResponse objectForKey:@"syncToken"];
         
-//        for (id json in [[responseObject objectForKey:@"data"] objectForKey:@"children"]) {
-        for (id json in eventResponse) {
+        for (id json in [eventResponse objectForKey:@"events"]) {
         
             EventDto *event = [[EventDto alloc] init];
             event.guid = [json objectForKey:@"guid"];

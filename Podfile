@@ -3,7 +3,7 @@ platform :ios, '8.1'
 
 target 'objcEventClient' do
 
-    pod 'AFNetworking', '~> 2.4'
+    pod 'AFNetworking', '~> 2.6.3'
     pod 'NSDate+TimeAgo', '~> 1.0.3'
     pod 'AsyncImageView', '~> 1.5.1'
     pod 'SVPullToRefresh', '~> 0.4.1'

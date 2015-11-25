@@ -6,7 +6,7 @@
 
 @interface EventService : NSObject
 
-#define BASE_URL @"http://192.168.57.1:8080"
+#define BASE_URL @"https://192.168.57.1:8443"
 
 #define LOGIN @"/login"
 #define REGISTER @"/register"

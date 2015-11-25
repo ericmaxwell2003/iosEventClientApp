@@ -14,6 +14,7 @@ static NSString *initialPage = @"";
 @interface EventTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *eventList;
+@property (nonatomic, strong) NSString *lastSyncToken;
 
 @end
 
@@ -48,7 +49,7 @@ static NSString *initialPage = @"";
     __weak typeof(self) weakSelf = self;
     // refresh new data when pull the table list
     [self.tableView addPullToRefreshWithActionHandler:^{
-        [weakSelf.eventList removeAllObjects]; // remove all data
+//        [weakSelf.eventList removeAllObjects]; // remove all data
         [weakSelf.tableView reloadData]; // before load new content, clear the existing table list
         [weakSelf loadFromServer]; // load new data
         [weakSelf.tableView.pullToRefreshView stopAnimating]; // clear the animation
@@ -71,14 +72,16 @@ static NSString *initialPage = @"";
 - (void)newEventsLoaded:(NSNotification*)notification
 {
     NSDictionary *results = notification.object;
-    
+
+    self.lastSyncToken = [results objectForKey:@"syncToken"];
     NSArray *events = [results objectForKey:@"events"];
     // if no more result
     if ([events count] == 0) {
         return;
     }
     
-    for (id obj in events) {
+    // need to reverse so the latest new ones appear first in the list
+    for (id obj in [events reverseObjectEnumerator]) {
         [self.eventList insertObject:obj atIndex:0];
     }
 
@@ -120,7 +123,6 @@ static NSString *initialPage = @"";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     EventTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     EventDto *event = [self.eventList objectAtIndex:[indexPath row]];
     cell.summary.text = event.summary;
@@ -137,7 +139,7 @@ static NSString *initialPage = @"";
     }
     
     EventService *service = [EventService sharedInstance];
-    [service loadEventsFromServerUsingSyncToken:nil];
+    [service loadEventsFromServerUsingSyncToken:self.lastSyncToken];
 }
 
 
