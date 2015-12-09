@@ -3,7 +3,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "UIScrollView+SVPullToRefresh.h"
-#import "AsyncImageView.h"
 #import "EventService.h"
 #import "EventDto.h"
 #import "EventTableViewCell.h"
@@ -133,7 +132,7 @@ static NSString *initialPage = @"";
 - (void)loadFromServer
 {
     // if the list is currently empty, we want to show the global loading
-    // otherwise we'll not and just let SVPullToRefresh/InfiniteScrolling indicators display.
+    // otherwise we'll not and just let SVPullToRefresh indicators display.
     if(self.eventList.count == 0) {
         [MMProgressHUD showWithTitle:@"Loading..."];
     }

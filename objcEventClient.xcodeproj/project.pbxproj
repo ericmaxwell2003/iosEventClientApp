@@ -12,7 +12,6 @@
 		07A4530E1C04F262007B78FE /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4530A1C04F262007B78FE /* EventTableViewCell.m */; };
 		07A453121C04F277007B78FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453101C04F277007B78FE /* main.m */; };
 		07A453141C04F291007B78FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A453131C04F291007B78FE /* Images.xcassets */; };
-		07A4531D1C04F328007B78FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A453191C04F328007B78FE /* LaunchScreen.xib */; };
 		07A4531E1C04F328007B78FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A4531B1C04F328007B78FE /* Main.storyboard */; };
 		6915C6871C0512A900D63CC3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915C6861C0512A900D63CC3 /* LoginViewController.m */; };
 		6915C68A1C0512C900D63CC3 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915C6891C0512C900D63CC3 /* SignupViewController.m */; };
@@ -35,7 +34,6 @@
 		07A4530F1C04F277007B78FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = objcEventClient/Info.plist; sourceTree = SOURCE_ROOT; };
 		07A453101C04F277007B78FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = objcEventClient/main.m; sourceTree = SOURCE_ROOT; };
 		07A453131C04F291007B78FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = objcEventClient/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		07A4531A1C04F328007B78FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = objcEventClient/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		07A4531C1C04F328007B78FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = objcEventClient/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		4BBF8C725FFE18B9CE10FF25 /* libPods-objcEventClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-objcEventClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D66A5961A4328DD00C35E75 /* Event Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +137,6 @@
 		4D66A5981A4328DD00C35E75 /* eventClient */ = {
 			isa = PBXGroup;
 			children = (
-				07A453191C04F328007B78FE /* LaunchScreen.xib */,
 				07A4531B1C04F328007B78FE /* Main.storyboard */,
 				07A453131C04F291007B78FE /* Images.xcassets */,
 				07A453001C04F1F3007B78FE /* AppDelegate.h */,
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A4531D1C04F328007B78FE /* LaunchScreen.xib in Resources */,
 				07A4531E1C04F328007B78FE /* Main.storyboard in Resources */,
 				699533971C0672EE00911644 /* localhost.cer in Resources */,
 				07A453141C04F291007B78FE /* Images.xcassets in Resources */,
@@ -311,14 +307,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		07A453191C04F328007B78FE /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07A4531A1C04F328007B78FE /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		07A4531B1C04F328007B78FE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

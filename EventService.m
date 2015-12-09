@@ -126,8 +126,6 @@
             event.url = [json objectForKey:@"url"];
             event.summary = [json objectForKey:@"summary"];
             event.details = [json objectForKey:@"details"];
-            event.thumbnailImgUrl = [json objectForKey:@"thumbnailImgUrl"];
-            event.detailImgUrl = [json objectForKey:@"detailImgUrl"];
  
             [events addObject:event];
         }
