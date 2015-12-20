@@ -7,42 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0709D0461C04F73E005DDF99 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0709D0451C04F73E005DDF99 /* Default-568h@2x.png */; };
-		07A452FF1C04F1DB007B78FE /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A452FD1C04F1DB007B78FE /* Post.m */; };
 		07A453021C04F1F4007B78FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453011C04F1F4007B78FE /* AppDelegate.m */; };
-		07A453051C04F20E007B78FE /* RedditService.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453041C04F20E007B78FE /* RedditService.m */; };
-		07A4530C1C04F262007B78FE /* RedditTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453061C04F262007B78FE /* RedditTableViewController.m */; };
-		07A4530D1C04F262007B78FE /* RedditDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453071C04F262007B78FE /* RedditDetailViewController.m */; };
-		07A4530E1C04F262007B78FE /* RedditTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4530A1C04F262007B78FE /* RedditTableViewCell.m */; };
-		07A453111C04F277007B78FE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07A4530F1C04F277007B78FE /* Info.plist */; };
+		07A4530C1C04F262007B78FE /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453061C04F262007B78FE /* EventTableViewController.m */; };
+		07A4530E1C04F262007B78FE /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A4530A1C04F262007B78FE /* EventTableViewCell.m */; };
 		07A453121C04F277007B78FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A453101C04F277007B78FE /* main.m */; };
 		07A453141C04F291007B78FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A453131C04F291007B78FE /* Images.xcassets */; };
-		07A4531D1C04F328007B78FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A453191C04F328007B78FE /* LaunchScreen.xib */; };
 		07A4531E1C04F328007B78FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A4531B1C04F328007B78FE /* Main.storyboard */; };
+		6915C6871C0512A900D63CC3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915C6861C0512A900D63CC3 /* LoginViewController.m */; };
+		6915C68A1C0512C900D63CC3 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6915C6891C0512C900D63CC3 /* SignupViewController.m */; };
+		69281C5F1C051EBB00FCECE3 /* EventDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 69281C5E1C051EBB00FCECE3 /* EventDto.m */; };
+		69281C611C051FE700FCECE3 /* EventService.m in Sources */ = {isa = PBXBuildFile; fileRef = 69281C601C051FE700FCECE3 /* EventService.m */; };
+		69281C671C0523B200FCECE3 /* LoginDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 69281C641C0523B200FCECE3 /* LoginDto.m */; };
+		69281C681C0523B200FCECE3 /* RegistrationDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 69281C661C0523B200FCECE3 /* RegistrationDto.m */; };
+		69281C6B1C052AF300FCECE3 /* OauthTokenDto.m in Sources */ = {isa = PBXBuildFile; fileRef = 69281C6A1C052AF300FCECE3 /* OauthTokenDto.m */; };
+		699533971C0672EE00911644 /* localhost.cer in Resources */ = {isa = PBXBuildFile; fileRef = 699533961C0672EE00911644 /* localhost.cer */; };
 		B55DEA82471D31BE45680F83 /* libPods-objcEventClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBF8C725FFE18B9CE10FF25 /* libPods-objcEventClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0709D0451C04F73E005DDF99 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		07A452FD1C04F1DB007B78FE /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = objcEventClient/Post.m; sourceTree = SOURCE_ROOT; };
-		07A452FE1C04F1DB007B78FE /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = objcEventClient/Post.h; sourceTree = SOURCE_ROOT; };
 		07A453001C04F1F3007B78FE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = objcEventClient/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		07A453011C04F1F4007B78FE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = objcEventClient/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		07A453031C04F20E007B78FE /* RedditService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditService.h; path = objcEventClient/RedditService.h; sourceTree = SOURCE_ROOT; };
-		07A453041C04F20E007B78FE /* RedditService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditService.m; path = objcEventClient/RedditService.m; sourceTree = SOURCE_ROOT; };
-		07A453061C04F262007B78FE /* RedditTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditTableViewController.m; path = objcEventClient/RedditTableViewController.m; sourceTree = SOURCE_ROOT; };
-		07A453071C04F262007B78FE /* RedditDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditDetailViewController.m; path = objcEventClient/RedditDetailViewController.m; sourceTree = SOURCE_ROOT; };
-		07A453081C04F262007B78FE /* RedditTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditTableViewCell.h; path = objcEventClient/RedditTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		07A453091C04F262007B78FE /* RedditDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditDetailViewController.h; path = objcEventClient/RedditDetailViewController.h; sourceTree = SOURCE_ROOT; };
-		07A4530A1C04F262007B78FE /* RedditTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RedditTableViewCell.m; path = objcEventClient/RedditTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		07A4530B1C04F262007B78FE /* RedditTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RedditTableViewController.h; path = objcEventClient/RedditTableViewController.h; sourceTree = SOURCE_ROOT; };
+		07A453061C04F262007B78FE /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventTableViewController.m; path = objcEventClient/EventTableViewController.m; sourceTree = SOURCE_ROOT; };
+		07A453081C04F262007B78FE /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventTableViewCell.h; path = objcEventClient/EventTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		07A4530A1C04F262007B78FE /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventTableViewCell.m; path = objcEventClient/EventTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		07A4530B1C04F262007B78FE /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventTableViewController.h; path = objcEventClient/EventTableViewController.h; sourceTree = SOURCE_ROOT; };
 		07A4530F1C04F277007B78FE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = objcEventClient/Info.plist; sourceTree = SOURCE_ROOT; };
 		07A453101C04F277007B78FE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = objcEventClient/main.m; sourceTree = SOURCE_ROOT; };
 		07A453131C04F291007B78FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = objcEventClient/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		07A4531A1C04F328007B78FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = objcEventClient/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		07A4531C1C04F328007B78FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = objcEventClient/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		4BBF8C725FFE18B9CE10FF25 /* libPods-objcEventClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-objcEventClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D66A5961A4328DD00C35E75 /* Event Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Event Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6915C6851C0512A900D63CC3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = SOURCE_ROOT; };
+		6915C6861C0512A900D63CC3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = SOURCE_ROOT; };
+		6915C6881C0512C900D63CC3 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = SOURCE_ROOT; };
+		6915C6891C0512C900D63CC3 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = SOURCE_ROOT; };
+		69281C5D1C051EBB00FCECE3 /* EventDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDto.h; sourceTree = SOURCE_ROOT; };
+		69281C5E1C051EBB00FCECE3 /* EventDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDto.m; sourceTree = SOURCE_ROOT; };
+		69281C601C051FE700FCECE3 /* EventService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventService.m; sourceTree = SOURCE_ROOT; };
+		69281C621C05200000FCECE3 /* EventService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventService.h; sourceTree = SOURCE_ROOT; };
+		69281C631C0523B200FCECE3 /* LoginDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginDto.h; sourceTree = SOURCE_ROOT; };
+		69281C641C0523B200FCECE3 /* LoginDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginDto.m; sourceTree = SOURCE_ROOT; };
+		69281C651C0523B200FCECE3 /* RegistrationDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationDto.h; sourceTree = SOURCE_ROOT; };
+		69281C661C0523B200FCECE3 /* RegistrationDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationDto.m; sourceTree = SOURCE_ROOT; };
+		69281C691C052AF300FCECE3 /* OauthTokenDto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OauthTokenDto.h; sourceTree = SOURCE_ROOT; };
+		69281C6A1C052AF300FCECE3 /* OauthTokenDto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OauthTokenDto.m; sourceTree = SOURCE_ROOT; };
+		699533961C0672EE00911644 /* localhost.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = localhost.cer; sourceTree = SOURCE_ROOT; };
 		7F2E2059F4D3B0028BCEE5B3 /* Pods-objcEventClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objcEventClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-objcEventClient/Pods-objcEventClient.debug.xcconfig"; sourceTree = "<group>"; };
 		9356835481C87C035DDDD139 /* Pods-objcEventClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-objcEventClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-objcEventClient/Pods-objcEventClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,12 +80,14 @@
 		07B217561AAA60180097848D /* viewController */ = {
 			isa = PBXGroup;
 			children = (
-				07A453061C04F262007B78FE /* RedditTableViewController.m */,
-				07A453071C04F262007B78FE /* RedditDetailViewController.m */,
-				07A453081C04F262007B78FE /* RedditTableViewCell.h */,
-				07A453091C04F262007B78FE /* RedditDetailViewController.h */,
-				07A4530A1C04F262007B78FE /* RedditTableViewCell.m */,
-				07A4530B1C04F262007B78FE /* RedditTableViewController.h */,
+				07A453061C04F262007B78FE /* EventTableViewController.m */,
+				07A4530B1C04F262007B78FE /* EventTableViewController.h */,
+				07A453081C04F262007B78FE /* EventTableViewCell.h */,
+				07A4530A1C04F262007B78FE /* EventTableViewCell.m */,
+				6915C6851C0512A900D63CC3 /* LoginViewController.h */,
+				6915C6861C0512A900D63CC3 /* LoginViewController.m */,
+				6915C6881C0512C900D63CC3 /* SignupViewController.h */,
+				6915C6891C0512C900D63CC3 /* SignupViewController.m */,
 			);
 			name = viewController;
 			sourceTree = "<group>";
@@ -84,8 +95,8 @@
 		07C42CE71AA9249E008E7CAE /* service */ = {
 			isa = PBXGroup;
 			children = (
-				07A453031C04F20E007B78FE /* RedditService.h */,
-				07A453041C04F20E007B78FE /* RedditService.m */,
+				69281C601C051FE700FCECE3 /* EventService.m */,
+				69281C621C05200000FCECE3 /* EventService.h */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -93,8 +104,14 @@
 		07C42CEB1AA92F31008E7CAE /* model */ = {
 			isa = PBXGroup;
 			children = (
-				07A452FD1C04F1DB007B78FE /* Post.m */,
-				07A452FE1C04F1DB007B78FE /* Post.h */,
+				69281C691C052AF300FCECE3 /* OauthTokenDto.h */,
+				69281C6A1C052AF300FCECE3 /* OauthTokenDto.m */,
+				69281C631C0523B200FCECE3 /* LoginDto.h */,
+				69281C641C0523B200FCECE3 /* LoginDto.m */,
+				69281C651C0523B200FCECE3 /* RegistrationDto.h */,
+				69281C661C0523B200FCECE3 /* RegistrationDto.m */,
+				69281C5D1C051EBB00FCECE3 /* EventDto.h */,
+				69281C5E1C051EBB00FCECE3 /* EventDto.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -102,7 +119,6 @@
 		4D66A58D1A4328DD00C35E75 = {
 			isa = PBXGroup;
 			children = (
-				0709D0451C04F73E005DDF99 /* Default-568h@2x.png */,
 				4D66A5981A4328DD00C35E75 /* eventClient */,
 				4D66A5971A4328DD00C35E75 /* Products */,
 				03733C04EC6EBB4C2A8415A8 /* Pods */,
@@ -121,7 +137,6 @@
 		4D66A5981A4328DD00C35E75 /* eventClient */ = {
 			isa = PBXGroup;
 			children = (
-				07A453191C04F328007B78FE /* LaunchScreen.xib */,
 				07A4531B1C04F328007B78FE /* Main.storyboard */,
 				07A453131C04F291007B78FE /* Images.xcassets */,
 				07A453001C04F1F3007B78FE /* AppDelegate.h */,
@@ -138,6 +153,7 @@
 		4D66A5991A4328DD00C35E75 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				699533961C0672EE00911644 /* localhost.cer */,
 				07A4530F1C04F277007B78FE /* Info.plist */,
 				07A453101C04F277007B78FE /* main.m */,
 			);
@@ -213,11 +229,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A4531D1C04F328007B78FE /* LaunchScreen.xib in Resources */,
 				07A4531E1C04F328007B78FE /* Main.storyboard in Resources */,
-				07A453111C04F277007B78FE /* Info.plist in Resources */,
+				699533971C0672EE00911644 /* localhost.cer in Resources */,
 				07A453141C04F291007B78FE /* Images.xcassets in Resources */,
-				0709D0461C04F73E005DDF99 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,27 +290,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07A4530C1C04F262007B78FE /* RedditTableViewController.m in Sources */,
+				6915C6871C0512A900D63CC3 /* LoginViewController.m in Sources */,
+				69281C611C051FE700FCECE3 /* EventService.m in Sources */,
+				07A4530C1C04F262007B78FE /* EventTableViewController.m in Sources */,
+				69281C5F1C051EBB00FCECE3 /* EventDto.m in Sources */,
+				69281C671C0523B200FCECE3 /* LoginDto.m in Sources */,
 				07A453021C04F1F4007B78FE /* AppDelegate.m in Sources */,
-				07A4530E1C04F262007B78FE /* RedditTableViewCell.m in Sources */,
-				07A4530D1C04F262007B78FE /* RedditDetailViewController.m in Sources */,
-				07A452FF1C04F1DB007B78FE /* Post.m in Sources */,
+				69281C681C0523B200FCECE3 /* RegistrationDto.m in Sources */,
+				6915C68A1C0512C900D63CC3 /* SignupViewController.m in Sources */,
+				07A4530E1C04F262007B78FE /* EventTableViewCell.m in Sources */,
 				07A453121C04F277007B78FE /* main.m in Sources */,
-				07A453051C04F20E007B78FE /* RedditService.m in Sources */,
+				69281C6B1C052AF300FCECE3 /* OauthTokenDto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		07A453191C04F328007B78FE /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				07A4531A1C04F328007B78FE /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		07A4531B1C04F328007B78FE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -393,11 +403,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/objcEventClient/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.credible.EventFinder;
 				PRODUCT_NAME = "Event Finder";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -407,11 +419,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/objcEventClient/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.credible.EventFinder;
 				PRODUCT_NAME = "Event Finder";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
